@@ -431,8 +431,10 @@ header .studio-in-logo {
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
 }
-.portfolio .item:hover,
-.portfolio .item:focus {
+
+.link-portfolio:focus,
+.link-portfolio:hover {
+  display: block;
   box-shadow: var(--portfolio-card-shadow);
 }
 
@@ -465,9 +467,6 @@ footer {
   background-color: var(--foorter-hero-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
-}
-footer > .container {
-  text-align: left;
 }
 
 footer .logo {
@@ -516,7 +515,7 @@ footer .studio-in-logo {
 .address-tel:focus {
   color: var(--accent-color);
 }
-.social > h3 {
+.social > p {
   color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
@@ -528,8 +527,14 @@ footer .studio-in-logo {
 .social {
   margin-left: 70px;
 }
+footer {
+  display: flex;
+  align-items: baseline;
+}
 footer > .container {
   display: flex;
+  align-items: baseline;
+  text-align: left;
 }
 .social-networks-footer {
   display: flex;
@@ -561,8 +566,4 @@ footer > .container {
 .social-network-icon-footer:focus,
 .social-network-icon-bg-footer:focus {
   background-color: #2196f3;
-}
-
-.social {
-  margin-top: 12px;
 }
