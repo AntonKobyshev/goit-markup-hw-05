@@ -107,6 +107,10 @@ header .studio-in-logo {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -137,6 +141,10 @@ header .studio-in-logo {
   display: flex;
   align-items: center;
   padding-inline-start: 0px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-header:hover,
 .contacts-header:focus {
@@ -192,11 +200,16 @@ header .studio-in-logo {
   min-width: 216px;
   min-height: 50px;
   border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-main:hover,
 .button-main:focus {
   background-color: var(--button-main-active-color);
 }
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -221,6 +234,10 @@ header .studio-in-logo {
   cursor: pointer;
   border: none;
   padding: 6px 22px;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-filter-content:first-child {
   padding: 6px 25px;
@@ -333,12 +350,10 @@ header .studio-in-logo {
   left: 0;
   width: 370px;
   height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);;
-  ;
+  background-color: rgba(47, 48, 58, 0.8);
   opacity: 1;
 }
-.pic-overlay-text{
-  
+.pic-overlay-text {
   position: absolute;
   background-color: transparent;
   bottom: 27px;
@@ -348,7 +363,7 @@ header .studio-in-logo {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--white-color)
+  color: var(--white-color);
 }
 /* наша команда */
 .persons-list {
@@ -404,15 +419,18 @@ header .studio-in-logo {
   align-items: center;
   justify-content: center;
   fill: var(--icon-color);
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-network-icon {
   width: 20px;
   height: 20px;
 }
-.social-network-icon:hover,
+
 .social-network-icon-bg:hover,
-.social-network-icon:focus,
 .social-network-icon-bg:focus {
   background-color: #2196f3;
   fill: var(--white-color);
@@ -433,6 +451,10 @@ header .studio-in-logo {
   align-items: center;
   justify-content: center;
   fill: var(--icon-color);
+
+  transition-property: outline, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo {
@@ -444,7 +466,7 @@ header .studio-in-logo {
   outline: 1px solid var(--accent-color);
   fill: var(--accent-color);
 }
-/* portfolio */
+/* Портфоліо */
 
 .portfolio {
   display: flex;
@@ -461,12 +483,6 @@ header .studio-in-logo {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
-}
-
-.link-portfolio:focus,
-.link-portfolio:hover {
-  display: block;
-  box-shadow: var(--portfolio-card-shadow);
 }
 
 /* .portfolio .item:nth-child(3n) {
@@ -492,9 +508,6 @@ header .studio-in-logo {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-.portfolio-card-thumb:hover::before{
-  opacity: 1;
-}
 
 .portfolio-card-thumb {
   position: relative;
@@ -507,9 +520,25 @@ header .studio-in-logo {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
+}
+
+.portfolio-card-thumb:hover::before {
+  opacity: 1;
+}
+
+.link-portfolio,
+.link-portfolio {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-portfolio:focus,
+.link-portfolio:hover {
+  display: block;
+  box-shadow: var(--portfolio-card-shadow);
 }
 /* Footer */
 
@@ -542,7 +571,12 @@ footer .studio-in-logo {
   letter-spacing: 0.03em;
   display: inline-block;
   margin-bottom: 9px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .address-mail {
   display: inline-block;
   margin-bottom: 9px;
@@ -555,6 +589,10 @@ footer .studio-in-logo {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -601,6 +639,10 @@ footer > .container {
   justify-content: center;
   fill: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-networks-footer-link:not(:last-child) {
   margin-right: 10px;
@@ -611,9 +653,7 @@ footer > .container {
   height: 20px;
 }
 
-.social-network-icon-footer:hover,
 .social-network-icon-bg-footer:hover,
-.social-network-icon-footer:focus,
 .social-network-icon-bg-footer:focus {
   background-color: #2196f3;
 }
