@@ -30,6 +30,8 @@ html {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --portfolio-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -94,8 +96,28 @@ header .studio-in-logo {
   margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav .item-nav:not(:last-child) {
   margin-right: 50px;
+}
+
+.site-nav-list .link {
+  position: relative;
+}
+
+.site-nav-list .current::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+
+
 }
 
 .site-nav .link {
@@ -108,7 +130,7 @@ header .studio-in-logo {
   font-size: 14px;
   line-height: 1.14;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
   
 }
 
@@ -141,7 +163,7 @@ header .studio-in-logo {
   align-items: center;
   padding-inline-start: 0px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
   
 }
 .contacts-header:hover,
@@ -199,7 +221,7 @@ header .studio-in-logo {
   min-height: 50px;
   border: none;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 .button-main:hover,
 .button-main:focus {
@@ -231,7 +253,7 @@ header .studio-in-logo {
   border: none;
   padding: 6px 22px;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function);
   }
 .button-filter-content:first-child {
   padding: 6px 25px;
@@ -266,11 +288,11 @@ header .studio-in-logo {
   display: flex;
 }
 
-.preferences .item {
+.preferences .item-preferences {
   width: 270px;
   text-align: left;
 }
-.preferences .item:not(:last-child) {
+.preferences .item-preferences:not(:last-child) {
   margin-right: var(--card-set-gap);
 }
 
@@ -342,7 +364,7 @@ header .studio-in-logo {
   content: '';
   bottom: 0;
   left: 0;
-  width: 370px;
+  width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
   opacity: 1;
@@ -414,7 +436,7 @@ header .studio-in-logo {
   justify-content: center;
   fill: var(--icon-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .social-network-icon {
@@ -444,7 +466,7 @@ header .studio-in-logo {
   justify-content: center;
   fill: var(--icon-color);
 
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .client-logo {
@@ -512,8 +534,8 @@ header .studio-in-logo {
   left: 0;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(101%);
+  transition: transform 250ms var(--timing-function);
  }
 
  .item:hover .portfolio-card-overlay {
@@ -538,7 +560,7 @@ header .studio-in-logo {
 .item:hover,
 .item:focus {
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--timing-function);
   }
 
 
@@ -579,7 +601,7 @@ footer .studio-in-logo {
   display: inline-block;
   margin-bottom: 9px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
 }
 
 .address-mail {
@@ -595,7 +617,7 @@ footer .studio-in-logo {
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
   }
 
 .address-link:hover,
@@ -643,7 +665,7 @@ footer > .container {
   fill: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
   
 }
 .social-networks-footer-link:not(:last-child) {
