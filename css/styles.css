@@ -701,6 +701,7 @@ transform: translate(-50%, -50%) scale(1.2);
 
 .modal {
   position: absolute;
+  
   top: 50%;
   left: 50%;
 
@@ -718,6 +719,9 @@ transform: translate(-50%, -50%) scale(1.2);
   }
 
  .button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
@@ -726,5 +730,9 @@ transform: translate(-50%, -50%) scale(1.2);
  }
 
 .close-icon {
-  fill: #000000;
+  fill: #000000; 
+}
+
+.button-close:hover .close-icon{
+  fill: var(--accent-color);
 }
