@@ -720,6 +720,9 @@ transform: translate(-50%, -50%) scale(1.2);
 
  .button-close {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 8px;
   right: 8px;
   border-radius: 50%;
