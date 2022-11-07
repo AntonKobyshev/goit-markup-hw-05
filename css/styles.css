@@ -547,8 +547,8 @@ header .studio-in-logo {
   text-align: left;
 }
 
-.item:hover,
-.item:focus {
+.item,
+.item {
   transition: box-shadow 250ms var(--timing-function);
 }
 
